@@ -1,23 +1,23 @@
 class Person:
-    def __init__(self, name, deposit=1000, loan=0):
+    def __init__(self, name, depostiy=1000, loan=0):
         self.name = name
         self.deposit = deposit
         self.loan = loan
     def __str__(self):
-        return f"Name: {self.name}, Deposit: {self.deposit}, Loan: {self.loan}"
+        return f"nameis {self.name}, deposit {self.deposit}, loanl {self.loan}"
 class House:
-    def __init__(self, house_id, price, owner):
-        self.house_id = house_id
+    def __init__(self, houseid, price, owner):
+        self.houseid = houseid
         self.price = price
         self.owner = owner
         self.status = "selling"
-    def sell(self, buyer, loan_amount=0):
-        if loan_amount > 0:
-            sale_status = "sold bu loan"
-            buyer.loan += loan_amount
+    def sell(self, buyer, loanamount=0):
+        if loanamount >0:
+            salestatus = "sold bu loan"
+            buyer.loan += loanamount
         else:
-            sale_status = "sold"
+            salestatus = "sold"
         self.owner.deposit += self.price
-        self.owner = buyer
-        self.status = sale_status
+        self.owner =buyer
+        self.status =salestatus
 
